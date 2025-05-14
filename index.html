@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7-дневный рацион питания</title>
+    <style>
+        :root {
+            --primary: #4a6fa5;
+            --secondary: #ff9e80;
+            --bg: #f8f9fa;
+            --text: #333;
+            --border: #ddd;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--bg);
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        h1, h2, h3 {
+            color: var(--primary);
+        }
+        
+        .day-container {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .meal {
+            margin-bottom: 25px;
+            border-bottom: 1px dashed var(--border);
+            padding-bottom: 15px;
+        }
+        
+        .meal:last-child {
+            border-bottom: none;
+        }
+        
+        .meal-title {
+            color: var(--secondary);
+            font-size: 1.3em;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .meal-title:before {
+            content: "🍽️";
+            margin-right: 10px;
+        }
+        
+        .meal-items {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .meal-items tr:nth-child(even) {
+            background-color: #f5f5f5;
+        }
+        
+        .meal-items td {
+            padding: 8px 12px;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .meal-items td:first-child {
+            width: 60%;
+        }
+        
+        .meal-total {
+    font-weight: bold;
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: #e3f2fd;
+    border-radius: 5px;
+    display: block; /* Изменено с inline-block на block */
+    width: calc(100% - 24px); /* 100% минус padding */
+    box-sizing: border-box;
+}
+
+.day-total {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #e8f5e9;
+    border-radius: 8px;
+    font-weight: bold;
+    width: calc(100% - 30px); /* Согласовано с meal-total */
+    box-sizing: border-box;
+}
+        
+        .emoji {
+            font-size: 1.2em;
+            margin-right: 5px;
+        }
+        
+        @media (max-width: 768px) {
+            .meal-items td {
+                display: block;
+                width: 100%;
+                box-sizing: border-box;
+            }
+            
+            .meal-items td:first-child {
+                padding-top: 12px;
+            }
+            
+            .meal-items td:last-child {
+                padding-bottom: 12px;
+                border-bottom: 1px solid var(--border);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>7-дневный рацион питания</h1>
+    
+    <!-- Понедельник -->
+    <div class="day-container">
+        <h2>Понедельник</h2>
+        
+        <div class="meal">
+            <h3 class="meal-title">Завтрак</h3>
+            <table class="meal-items">
+                <tr>
+                    <td><span class="emoji">🥣</span> Овсянка: 100 г сухой</td>
+                    <td>0,3 BYN</td>
+                </tr>
+                <tr>
+                    <td><span class="emoji">🥛</span> Молоко: 200 мл</td>
+                    <td>0,5 BYN</td>
+                </tr>
+                <tr>
+                    <td><span class="emoji">🍌</span> Банан: 120 г</td>
+                    <td>0,6 BYN</td>
+                </tr>
+                <tr>
+                    <td><span class="emoji">🥜</span> Арахис: 20 г</td>
+                    <td>0,25 BYN</td>
+                </tr>
+            </table>
+            <div class="meal-total">
+                Итого: 650 ккал | Б:30г | Ж:20г | У:110г
+            </div>
+        </div>
+        
+        <div class="meal">
+            <h3 class="meal-title">Перекус</h3>
+            <table class="meal-items">
+                <tr>
+                    <td><span class="emoji">🧀</span> Творог: 150 г</td>
+                    <td>1,7 BYN</td>
+                </tr>
+                <tr>
+                    <td><span class="emoji">🍞</span> Тост: 50 г</td>
+                    <td>0,2 BYN</td>
+                </tr>
+                <tr>
+                    <td><span class="emoji">🍯</span> Мёд: 10 г</td>
+                    <td>0,1 BYN</td>
+                </tr>
+            </table>
+            <div class="meal-total">
+                Итого: 350 ккал | Б:28г | Ж:10г | У:35г
+            </div>
+        </div>
+        
+        <div class="meal">
+            <h3 class="meal-title">Обед</h3>
+            <table class="meal-items">
+                <tr>
+                    <td><span class="emoji">🍚</span> Рис: 120 г сухой</td>
+                    <td>0,5 BYN</td>
+                </tr>
+                <tr>
+                    <td><span class="emoji">🍗</span> Курица: 100 г</td>
+                    <td>1,3 BYN</td>
+                </tr>
+                <tr>
+                    <td><span class="emoji">🥬</span> Капуста тушеная: 200 г</td>
+                    <td>0,3 BYN</td>
+                </tr>
+                <tr>
+                    <td><span class="emoji">🫒</span> Масло: 5 г</td>
+                    <td>0,1 BYN</td>
+                </tr>
+            </table>
+            <div class="meal-total">
+                Итого: 750 ккал | Б:55г | Ж:25г | У:103г
+            </div>
+        </div>
+        
+        <div class="meal">
+            <h3 class="meal-title">Перекус</h3>
+            <table class="meal-items">
+                <tr>
+                    <td><span class="emoji">🥚</span> Яйца: 2 шт</td>
+                    <td>0,7 BYN</td>
+                </tr>
+                <tr>
+                    <td><span class="emoji">🍏</span> Яблоко: 100 г</td>
+                    <td>0,4 BYN</td>
+                </tr>
+            </table>
+            <div class="meal-total">
+                Итого: 300 ккал | Б:16г | Ж:12г | У:20г
+            </div>
+        </div>
+        
+        <div class="meal">
+            <h3 class="meal-title">Ужин</h3>
+            <table class="meal-items">
+                <tr>
+                    <td><span class="emoji">🍝</span> Макароны: 90 г сухих</td>
+                    <td>0,3 BYN</td>
+                </tr>
+                <tr>
+                    <td><span class="emoji">🥓</span> Ветчина: 70 г</td>
+                    <td>1,3 BYN</td>
+                </tr>
+                <tr>
+                    <td><span class="emoji">🧀</span> Сыр: 20 г</td>
+                    <td>0,6 BYN</td>
+                </tr>
+            </table>
+            <div class="meal-total">
+                Итого: 650 ккал | Б:45г | Ж:32г | У:70г
+            </div>
+        </div>
+        
+        <div class="meal">
+            <h3 class="meal-title">На ночь</h3>
+            <table class="meal-items">
+                <tr>
+                    <td><span class="emoji">🧀</span> Творог: 100 г</td>
+                    <td>1,1 BYN</td>
+                </tr>
+                <tr>
+                    <td><span class="emoji">🥛</span> Молоко: 200 мл</td>
+                    <td>0,5 BYN</td>
+                </tr>
+            </table>
+            <div class="meal-total">
+                Итого: 250 ккал | Б:22г | Ж:8г | У:12г
+            </div>
+        </div>
+        
+        <div class="day-total">
+            <strong>Итого за день:</strong> Б:195г | Ж:106г | У:350г | Калории: 3100 ккал | Стоимость: ~10 BYN
+        </div>
+    </div>
+    
+    <!-- Вторник (дублируйте структуру понедельника) -->
+    <div class="day-container">
+        <h2>Вторник</h2>
+        
+            <div class="meal">
+                <h3 class="meal-title">Завтрак</h3>
+                <table class="meal-items">
+                    <tr><td>🥞 Сырники (творог 200 г, яйцо, мука):</td><td>2.5 BYN</td></tr>
+                    <tr><td>🍯 Сметана: 20 г</td><td>0.3 BYN</td></tr>
+                    <tr><td>🍌 Банан: 100 г</td><td>0.5 BYN</td></tr>
+                </table>
+                <div class="meal-total">Итого: 650 ккал | Б:40г | Ж:18г | У:90г</div>
+            </div>
+        
+            <div class="meal">
+                <h3 class="meal-title">Перекус</h3>
+                <table class="meal-items">
+                    <tr><td>🍳 Омлет: 2 яйца + молоко</td><td>0.8 BYN</td></tr>
+                    <tr><td>🍞 Тост: 70 г</td><td>0.3 BYN</td></tr>
+                    <tr><td>🍎 Яблоко: 100 г</td><td>0.4 BYN</td></tr>
+                </table>
+                <div class="meal-total">Итого: 450 ккал | Б:22г | Ж:14г | У:50г</div>
+            </div>
+        
+            <div class="meal">
+                <h3 class="meal-title">Обед</h3>
+                <table class="meal-items">
+                    <tr><td>🍚 Гречка: 120 г сухой</td><td>0.6 BYN</td></tr>
+                    <tr><td>🍗 Курица: 100 г</td><td>1.3 BYN</td></tr>
+                    <tr><td>🥕 Морковь тушеная: 100 г</td><td>0.2 BYN</td></tr>
+                </table>
+                <div class="meal-total">Итого: 750 ккал | Б:50г | Ж:18г | У:95г</div>
+            </div>
+        
+            <div class="meal">
+                <h3 class="meal-title">Перекус</h3>
+                <table class="meal-items">
+                    <tr><td>🧀 Творог: 150 г</td><td>1.7 BYN</td></tr>
+                    <tr><td>🥜 Арахис: 20 г</td><td>0.25 BYN</td></tr>
+                    <tr><td>🍯 Мёд: 15 г</td><td>0.15 BYN</td></tr>
+                </table>
+                <div class="meal-total">Итого: 400 ккал | Б:28г | Ж:12г | У:30г</div>
+            </div>
+        
+            <div class="meal">
+                <h3 class="meal-title">Ужин</h3>
+                <table class="meal-items">
+                    <tr><td>🍝 Рис: 100 г сухой</td><td>0.4 BYN</td></tr>
+                    <tr><td>🥩 Ветчина: 80 г</td><td>1.5 BYN</td></tr>
+                    <tr><td>🧀 Сыр: 30 г</td><td>0.9 BYN</td></tr>
+                </table>
+                <div class="meal-total">Итого: 650 ккал | Б:45г | Ж:24г | У:75г</div>
+            </div>
+        
+            <div class="meal">
+                <h3 class="meal-title">На ночь</h3>
+                <table class="meal-items">
+                    <tr><td>🥛 Кефир: 200 мл</td><td>0.6 BYN</td></tr>
+                    <tr><td>🍪 Сухое печенье: 30 г</td><td>0.3 BYN</td></tr>
+                </table>
+                <div class="meal-total">Итого: 250 ккал | Б:8г | Ж:6г | У:25г</div>
+            </div>
+        
+            <div class="day-total">
+                <strong>Итого за день:</strong> Б:193г | Ж:92г | У:365г | Калории: ~3150 ккал | Стоимость: ~10.8 BYN
+            </div>
+        </div>
+        
+          
+    </div>
+    
+    <!-- Среда -->
+    <div class="day-container">
+        <h2>Среда</h2>
+        
+        <div class="meal">
+            <h3 class="meal-title">Завтрак</h3>
+            <table class="meal-items">
+                <tr><td>🥣 Овсянка: 100 г сухой</td><td>0.4 BYN</td></tr>
+                <tr><td>🍯 Мёд: 15 г</td><td>0.15 BYN</td></tr>
+                <tr><td>🍏 Яблоко: 100 г</td><td>0.4 BYN</td></tr>
+                <tr><td>🥜 Орехи: 10 г</td><td>0.2 BYN</td></tr>
+            </table>
+            <div class="meal-total">Итого: 600 ккал | Б: 20 г | Ж: 12 г | У: 55 г</div>
+        </div>
+    
+        <div class="meal">
+            <h3 class="meal-title">Перекус</h3>
+            <table class="meal-items">
+                <tr><td>🍞 Тост: 80 г</td><td>0.3 BYN</td></tr>
+                <tr><td>🧀 Сыр: 30 г</td><td>0.9 BYN</td></tr>
+                <tr><td>🥩 Ветчина: 50 г</td><td>1.0 BYN</td></tr>
+                <tr><td>🍌 Банан: 100 г</td><td>0.6 BYN</td></tr>
+            </table>
+            <div class="meal-total">Итого: 500 ккал | Б: 35 г | Ж: 15 г | У: 50 г</div>
+        </div>
+    
+        <div class="meal">
+            <h3 class="meal-title">Обед</h3>
+            <table class="meal-items">
+                <tr><td>🍝 Макароны: 120 г сухих</td><td>0.5 BYN</td></tr>
+                <tr><td>🍗 Курица: 100 г</td><td>1.3 BYN</td></tr>
+                <tr><td>🥦 Овощи: 150 г</td><td>0.3 BYN</td></tr>
+                <tr><td>🌻 Подсолнечное масло: 5 г</td><td>0.1 BYN</td></tr>
+            </table>
+            <div class="meal-total">Итого: 800 ккал | Б: 60 г | Ж: 25 г | У: 80 г</div>
+        </div>
+    
+        <div class="meal">
+            <h3 class="meal-title">Перекус</h3>
+            <table class="meal-items">
+                <tr><td>🍰 Творожная запеканка: 200 г</td><td>2.5 BYN</td></tr>
+                <tr><td>🍇 Ягоды/фрукты: 100 г</td><td>0.5 BYN</td></tr>
+            </table>
+            <div class="meal-total">Итого: 450 ккал | Б: 35 г | Ж: 12 г | У: 40 г</div>
+        </div>
+    
+        <div class="meal">
+            <h3 class="meal-title">Ужин</h3>
+            <table class="meal-items">
+                <tr><td>🍚 Рис: 100 г сухой</td><td>0.4 BYN</td></tr>
+                <tr><td>🍳 Яйца: 2 шт</td><td>0.7 BYN</td></tr>
+                <tr><td>🥒 Огурцы: 100 г</td><td>0.4 BYN</td></tr>
+                <tr><td>🧈 Масло: 5 г</td><td>0.1 BYN</td></tr>
+            </table>
+            <div class="meal-total">Итого: 650 ккал | Б: 40 г | Ж: 18 г | У: 60 г</div>
+        </div>
+    
+        <div class="meal">
+            <h3 class="meal-title">На ночь</h3>
+            <table class="meal-items">
+                <tr><td>🥛 Кефир: 200 мл</td><td>0.6 BYN</td></tr>
+                <tr><td>🍞 Хлебец: 20 г</td><td>0.1 BYN</td></tr>
+            </table>
+            <div class="meal-total">Итого: 250 ккал | Б: 8 г | Ж: 3 г | У: 20 г</div>
+        </div>
+    
+        <div class="day-total">
+            <strong>Итого за день:</strong> Б: 175 г | Ж: 95 г | У: 350 г | Калории: ~3250 ккал | Стоимость: ~10.8 BYN
+        </div>
+    </div>
+    
+    
+    <!-- Чт -->
+    <div class="day-container">
+        <h2>Четверг</h2>
+        
+        <div class="meal">
+            <h3 class="meal-title">Завтрак</h3>
+            <table class="meal-items">
+                <tr><td>🍚 Гречка: 100 г сухой</td><td>0.5 BYN</td></tr>
+                <tr><td>🥛 Молоко: 200 мл</td><td>0.5 BYN</td></tr>
+                <tr><td>🍌 Банан: 120 г</td><td>0.7 BYN</td></tr>
+            </table>
+            <div class="meal-total">Итого: 650 ккал | Б: 25 г | Ж: 10 г | У: 60 г</div>
+        </div>
+    
+        <div class="meal">
+            <h3 class="meal-title">Перекус</h3>
+            <table class="meal-items">
+                <tr><td>🧀 Сырники (200 г творога, 1 яйцо, 30 г муки)</td><td>2.6 BYN</td></tr>
+                <tr><td>🍯 Джем: 20 г</td><td>0.2 BYN</td></tr>
+                <tr><td>🍞 Хлебец: 30 г</td><td>0.2 BYN</td></tr>
+            </table>
+            <div class="meal-total">Итого: 500 ккал | Б: 35 г | Ж: 10 г | У: 45 г</div>
+        </div>
+    
+        <div class="meal">
+            <h3 class="meal-title">Обед</h3>
+            <table class="meal-items">
+                <tr><td>🍚 Рис: 120 г сухого</td><td>0.5 BYN</td></tr>
+                <tr><td>🍗 Курица: 100 г</td><td>1.3 BYN</td></tr>
+                <tr><td>🥒 Горошек: 100 г</td><td>0.5 BYN</td></tr>
+                <tr><td>🧈 Масло: 5 г</td><td>0.1 BYN</td></tr>
+            </table>
+            <div class="meal-total">Итого: 800 ккал | Б: 50 г | Ж: 20 г | У: 75 г</div>
+        </div>
+    
+        <div class="meal">
+            <h3 class="meal-title">Перекус</h3>
+            <table class="meal-items">
+                <tr><td>🧀 Творог: 150 г</td><td>1.7 BYN</td></tr>
+                <tr><td>🥜 Арахис: 20 г</td><td>0.25 BYN</td></tr>
+                <tr><td>🍏 Яблоко: 100 г</td><td>0.4 BYN</td></tr>
+            </table>
+            <div class="meal-total">Итого: 400 ккал | Б: 30 г | Ж: 12 г | У: 30 г</div>
+        </div>
+    
+        <div class="meal">
+            <h3 class="meal-title">Ужин</h3>
+            <table class="meal-items">
+                <tr><td>🍝 Макароны: 100 г сухих</td><td>0.4 BYN</td></tr>
+                <tr><td>🥩 Ветчина: 80 г</td><td>1.5 BYN</td></tr>
+                <tr><td>🧀 Сыр: 20 г</td><td>0.6 BYN</td></tr>
+                <tr><td>🥕 Морковь: 100 г</td><td>0.2 BYN</td></tr>
+            </table>
+            <div class="meal-total">Итого: 700 ккал | Б: 45 г | Ж: 18 г | У: 60 г</div>
+        </div>
+    
+        <div class="meal">
+            <h3 class="meal-title">На ночь</h3>
+            <table class="meal-items">
+                <tr><td>🥛 Кефир: 200 мл</td><td>0.6 BYN</td></tr>
+                <tr><td>🍪 Овсянка: 30 г</td><td>0.1 BYN</td></tr>
+            </table>
+            <div class="meal-total">Итого: 200 ккал | Б: 8 г | Ж: 2 г | У: 20 г</div>
+        </div>
+    
+        <div class="day-total">
+            <strong>Итого за день:</strong> Б: 170 г | Ж: 90 г | У: 350 г | Калории: ~3250 ккал | Стоимость: ~11 BYN
+        </div>
+    </div>
+    
+
+    <div class="day-container">
+        <h2>Пятница</h2>
+        
+        <div class="meal">
+            <h3 class="meal-title">Завтрак</h3>
+            <table class="meal-items">
+                <tr><td>🥣 Овсянка: 80 г сухой</td><td>0.3 BYN</td></tr>
+                <tr><td>🍳 Яйцо: 1 шт</td><td>0.34 BYN</td></tr>
+                <tr><td>🍞 Тост: 50 г</td><td>0.2 BYN</td></tr>
+            </table>
+            <div class="meal-total">Итого: 550 ккал | Б:30г | Ж:12г | У:55г</div>
+        </div>
+    
+        <div class="meal">
+            <h3 class="meal-title">Перекус</h3>
+            <table class="meal-items">
+                <tr><td>🧀 Творог: 150 г</td><td>1.7 BYN</td></tr>
+                <tr><td>🍌 Банан: 100 г</td><td>0.6 BYN</td></tr>
+            </table>
+            <div class="meal-total">Итого: 350 ккал | Б:25г | Ж:6г | У:35г</div>
+        </div>
+    
+        <div class="meal">
+            <h3 class="meal-title">Обед</h3>
+            <table class="meal-items">
+                <tr><td>🍚 Гречка: 100 г сухой</td><td>0.5 BYN</td></tr>
+                <tr><td>🍗 Курица: 100 г</td><td>1.3 BYN</td></tr>
+                <tr><td>🥗 Салат (капуста+морковь): 150 г</td><td>0.3 BYN</td></tr>
+                <tr><td>🌻 Масло: 5 г</td><td>0.1 BYN</td></tr>
+            </table>
+            <div class="meal-total">Итого: 700 ккал | Б:55г | Ж:20г | У:60г</div>
+        </div>
+    
+        <div class="meal">
+            <h3 class="meal-title">Перекус</h3>
+            <table class="meal-items">
+                <tr><td>🍳 Омлет (2 яйца + молоко):</td><td>1.5 BYN</td></tr>
+                <tr><td>🍞 Хлеб: 50 г</td><td>0.2 BYN</td></tr>
+            </table>
+            <div class="meal-total">Итого: 400 ккал | Б:25г | Ж:14г | У:35г</div>
+        </div>
+    
+        <div class="meal">
+            <h3 class="meal-title">Ужин</h3>
+            <table class="meal-items">
+                <tr><td>🍝 Рис: 80 г сухой</td><td>0.3 BYN</td></tr>
+                <tr><td>🥩 Ветчина: 80 г</td><td>1.5 BYN</td></tr>
+                <tr><td>🧀 Сыр: 20 г</td><td>0.6 BYN</td></tr>
+            </table>
+            <div class="meal-total">Итого: 600 ккал | Б:40г | Ж:18г | У:55г</div>
+        </div>
+    
+        <div class="meal">
+            <h3 class="meal-title">На ночь</h3>
+            <table class="meal-items">
+                <tr><td>🥛 Молоко: 200 мл</td><td>0.5 BYN</td></tr>
+                <tr><td>🍪 Сухое печенье: 30 г</td><td>0.3 BYN</td></tr>
+            </table>
+            <div class="meal-total">Итого: 250 ккал | Б:8г | Ж:5г | У:20г</div>
+        </div>
+    
+        <div class="day-total">
+            <strong>Итого за день:</strong> Б:165г | Ж:75г | У:350г | Калории: ~3200 ккал | Стоимость: ~10.5 BYN
+        </div>
+    </div>
+    
+
+    <div class="day-container">
+        <h2>Суббота</h2>
+        
+        <div class="meal">
+            <h3 class="meal-title">Завтрак</h3>
+            <table class="meal-items">
+                <tr><td>🧀 Сырники (творог 200 г + яйцо + 20 г муки)</td><td>2.5 BYN</td></tr>
+                <tr><td>🥄 Сметана: 20 г</td><td>0.3 BYN</td></tr>
+            </table>
+            <div class="meal-total">Итого: 600 ккал | Б:45г | Ж:15г | У:45г</div>
+        </div>
+    
+        <div class="meal">
+            <h3 class="meal-title">Перекус</h3>
+            <table class="meal-items">
+                <tr><td>🍞 Тост: 50 г</td><td>0.2 BYN</td></tr>
+                <tr><td>🧀 Сыр: 30 г</td><td>0.9 BYN</td></tr>
+                <tr><td>🥩 Ветчина: 50 г</td><td>1.0 BYN</td></tr>
+            </table>
+            <div class="meal-total">Итого: 400 ккал | Б:30г | Ж:18г | У:25г</div>
+        </div>
+    
+        <div class="meal">
+            <h3 class="meal-title">Обед</h3>
+            <table class="meal-items">
+                <tr><td>🍝 Макароны: 100 г сухих</td><td>0.4 BYN</td></tr>
+                <tr><td>🍗 Курица: 100 г</td><td>1.3 BYN</td></tr>
+                <tr><td>🥗 Овощи: 150 г</td><td>0.3 BYN</td></tr>
+            </table>
+            <div class="meal-total">Итого: 750 ккал | Б:55г | Ж:20г | У:60г</div>
+        </div>
+    
+        <div class="meal">
+            <h3 class="meal-title">Перекус</h3>
+            <table class="meal-items">
+                <tr><td>🧀 Творог: 150 г</td><td>1.7 BYN</td></tr>
+                <tr><td>🍯 Мёд: 20 г</td><td>0.2 BYN</td></tr>
+                <tr><td>🍌 Банан: 100 г</td><td>0.6 BYN</td></tr>
+            </table>
+            <div class="meal-total">Итого: 400 ккал | Б:25г | Ж:6г | У:45г</div>
+        </div>
+    
+        <div class="meal">
+            <h3 class="meal-title">Ужин</h3>
+            <table class="meal-items">
+                <tr><td>🍚 Рис: 80 г сухого</td><td>0.3 BYN</td></tr>
+                <tr><td>🍳 Яйца: 2 шт</td><td>0.7 BYN</td></tr>
+                <tr><td>🥒 Огурцы: 100 г</td><td>0.4 BYN</td></tr>
+            </table>
+            <div class="meal-total">Итого: 600 ккал | Б:40г | Ж:16г | У:50г</div>
+        </div>
+    
+        <div class="meal">
+            <h3 class="meal-title">На ночь</h3>
+            <table class="meal-items">
+                <tr><td>🥛 Кефир: 200 мл</td><td>0.6 BYN</td></tr>
+                <tr><td>🍪 Галеты: 40 г</td><td>0.4 BYN</td></tr>
+            </table>
+            <div class="meal-total">Итого: 250 ккал | Б:8г | Ж:4г | У:25г</div>
+        </div>
+    
+        <div class="day-total">
+            <strong>Итого за день:</strong> Б:175г | Ж:79г | У:350г | Калории: ~3300 ккал | Стоимость: ~11 BYN
+        </div>
+    </div>
+    
+
+    <div class="day-container">
+        <h2>Воскресенье</h2>
+        
+        <div class="meal">
+            <h3 class="meal-title">Завтрак</h3>
+            <table class="meal-items">
+                <tr><td>🌾 Овсянка: 80 г сухой</td><td>0.3 BYN</td></tr>
+                <tr><td>🥜 Арахис: 30 г</td><td>0.4 BYN</td></tr>
+                <tr><td>🍌 Банан: 100 г</td><td>0.6 BYN</td></tr>
+            </table>
+            <div class="meal-total">Итого: 650 ккал | Б:30г | Ж:15г | У:55г</div>
+        </div>
+    
+        <div class="meal">
+            <h3 class="meal-title">Перекус</h3>
+            <table class="meal-items">
+                <tr><td>🍰 Творожная запеканка (творог 200 г + яйцо + 20 г манки)</td><td>2.6 BYN</td></tr>
+                <tr><td>🍏 Яблоко: 100 г</td><td>0.4 BYN</td></tr>
+            </table>
+            <div class="meal-total">Итого: 450 ккал | Б:35г | Ж:10г | У:40г</div>
+        </div>
+    
+        <div class="meal">
+            <h3 class="meal-title">Обед</h3>
+            <table class="meal-items">
+                <tr><td>🍚 Гречка: 100 г сухой</td><td>0.5 BYN</td></tr>
+                <tr><td>🍗 Курица: 100 г</td><td>1.3 BYN</td></tr>
+                <tr><td>🥕 Морковь: 100 г</td><td>0.1 BYN</td></tr>
+                <tr><td>🧈 Масло: 5 г</td><td>0.1 BYN</td></tr>
+            </table>
+            <div class="meal-total">Итого: 700 ккал | Б:55г | Ж:20г | У:60г</div>
+        </div>
+    
+        <div class="meal">
+            <h3 class="meal-title">Перекус</h3>
+            <table class="meal-items">
+                <tr><td>🍳 Омлет: 2 яйца + молоко</td><td>0.8 BYN</td></tr>
+                <tr><td>🍞 Тост: 50 г</td><td>0.2 BYN</td></tr>
+                <tr><td>🍌 Банан: 100 г</td><td>0.6 BYN</td></tr>
+            </table>
+            <div class="meal-total">Итого: 450 ккал | Б:25г | Ж:14г | У:45г</div>
+        </div>
+    
+        <div class="meal">
+            <h3 class="meal-title">Ужин</h3>
+            <table class="meal-items">
+                <tr><td>🍝 Макароны: 80 г сухих</td><td>0.3 BYN</td></tr>
+                <tr><td>🥩 Ветчина: 80 г</td><td>1.5 BYN</td></tr>
+                <tr><td>🧀 Сыр: 30 г</td><td>0.9 BYN</td></tr>
+                <tr><td>🥒 Огурцы: 100 г</td><td>0.4 BYN</td></tr>
+            </table>
+            <div class="meal-total">Итого: 700 ккал | Б:50г | Ж:20г | У:60г</div>
+        </div>
+    
+        <div class="meal">
+            <h3 class="meal-title">На ночь</h3>
+            <table class="meal-items">
+                <tr><td>🥛 Молоко: 200 мл</td><td>0.5 BYN</td></tr>
+                <tr><td>🍯 Мёд: 10 г</td><td>0.1 BYN</td></tr>
+                <tr><td>🍪 Галеты: 30 г</td><td>0.3 BYN</td></tr>
+            </table>
+            <div class="meal-total">Итого: 250 ккал | Б:10г | Ж:4г | У:30г</div>
+        </div>
+    
+        <div class="day-total">
+            <strong>Итого за день:</strong> Б:180г | Ж:83г | У:350г | Калории: ~3350 ккал | Стоимость: ~11.2 BYN
+        </div>
+    </div>
+    
+    
+</body>
+</html>
